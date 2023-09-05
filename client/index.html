@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="dark-mode">
+    <button id="load-btn">Load JSON File</button>
+    <div id="json-content"></div>
+    
+    <script>
+        let data = document.getElementById("json-content");
+        document.getElementById('load-btn').addEventListener('click', function () {
+            fetch('data.json') 
+                .then(response => response.json())
+                .then(json => {
+                    const jsonData = JSON.parse(JSON.stringify(json));
+                    json.forEach(element => {
+                        console.log('JSON Data:', JSON.stringify(element, null, 2));
+                        let per = document.createElement("pre");
+                        data.appendChild(per);
+                        per.innerHTML = JSON.stringify(element, null, 2);
+                    });
+                })
+                .catch(error => {
+                    console.log('Error:', error);
+                });
+        });
+    </script>
+</body>
+
+</html>

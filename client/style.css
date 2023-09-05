@@ -1,0 +1,119 @@
+:root {
+    /* Light Mode Color Scheme */
+    --primary-color-light: #4a90e2;
+    --background-color-light: #f5f5f5;
+    --text-color-light: #333333;
+    --highlight-color-light: #ffd700;
+    
+    /* Dark Mode Color Scheme */
+    --primary-color-dark: #c0392b;
+    --background-color-dark: #222222;
+    --text-color-dark: #ffffff;
+    --highlight-color-dark: #ffd700;
+  }
+  
+  /* Global Font Family and Size */
+  body {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+  
+  /* Title */
+  h1, h2, h3 {
+    font-family: "Courier New", Monaco, "Roboto Mono", "Fira Code", monospace;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  /* Body */
+  p, span {
+    font-family: "Roboto", Arial, sans-serif;
+  }
+  
+  /* Navigation Bar */
+  navbar {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 18px;
+  }
+  
+  /* Button */
+  button {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    padding: 1rem 1rem;
+    box-shadow: 0 2px 5px var(--box-shadow-color);
+    border-radius: 5%;
+  }
+  
+  /* Table */
+  table {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 14px;
+  }
+  
+  /* Form */
+  form input, form select {
+    font-family: "Roboto", Arial, sans-serif;
+    border: 2px solid;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Light Mode Styles */
+  .light-mode {
+    --anti-color: var(var(--background-color-dark));
+    --primary-color: var(--primary-color-light);
+    --background-color: var(--background-color-light);
+    --text-color: var(--text-color-light);
+    --highlight-color: var(--highlight-color-light);
+    --box-shadow-color: rgba(1,1,1, 0.5);
+    
+    /* Additional Light Mode Styles */
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  /* Dark Mode Styles */
+  .dark-mode {
+    --anti-color: var(var(var(--background-color-light)));
+    --primary-color: var(--primary-color-dark);
+    --background-color: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+    --highlight-color: var(--highlight-color-dark);
+    --box-shadow-color: rgba(1,1,1, 0.5);
+
+    /* Additional Dark Mode Styles */
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  /* Toggle between Light and Dark Mode */
+  @media (prefers-color-scheme: light) {
+    :root {
+      --primary-color: var(--primary-color-light);
+      --background-color: var(--background-color-light);
+      --text-color: var(--text-color-light);
+      --highlight-color: var(--highlight-color-light);
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary-color: var(--primary-color-dark);
+      --background-color: var(--background-color-dark);
+      --text-color: var(--text-color-dark);
+      --highlight-color: var(--highlight-color-dark);
+    }
+  }
+
+#json-content {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+}

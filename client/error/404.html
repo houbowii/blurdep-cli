@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404oops!</title>
+</head>
+<body>
+    
+    <style>
+        :root {
+            --theme-background-color: white;
+            --theme-font-color: lightslategrey;
+            --theme-danger-color: rgba(222, 70, 70, 0.96);
+            --theme-typeAnimation-color: black;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: monospace;
+            background-color: var(--theme-background-color);
+            color: var(--theme-font-color);
+        }
+        #app_404 {
+            display: block;
+            box-sizing: border-box;
+            line-height: 2rem;
+            font-size: 1.5rem;
+        }
+        strong {
+            display: block;
+            line-height: 4rem;
+            color: var(--theme-danger-color);
+            font-size: 3rem;
+            top: -20vh;
+            left: 1vh;
+        }
+        .tips {
+            margin: 1rem 0;
+        }
+        #cn {
+            box-sizing: border-box;
+            width: fit-content;
+            letter-spacing: 0.1rem;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            position: relative;
+        }
+        #cn::after, #cn::before{
+            content: '';
+            position: absolute;
+            inset: 0;
+        }
+        #cn::before {
+            background-color: var(--theme-background-color);
+            animation: typing 2s steps(5) 200ms forwards;
+        }
+        #cn::after {
+            width: 0.2rem;
+            background-color: var(--theme-typeAnimation-color);
+            animation: 
+                typing 2s steps(5) 200ms forwards,
+                cursor_blink 400ms infinite;       
+        }
+        #en {
+            font-family: 'Courier New', Courier, monospace;
+            box-sizing: border-box;
+            width: fit-content;
+            letter-spacing: 0.2rem;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            position: relative;
+        }
+        #en::after, #cn::before{
+            content: '';
+            position: absolute;
+            inset: 0;
+        }
+        #en::before {
+            background-color: var(--theme-background-color);
+            animation: typing 2s steps(17) 500ms forwards;
+        }
+        #en::after {
+            background-color: var(--theme-background-color);
+            animation: 
+                typing 2s steps(17) 500ms forwards,
+                cursor_blink 600ms infinite;
+        }
+        @keyframes cursor_blink {
+            50%{
+                background-color: var(--theme-background-color);
+            }
+        }
+        @keyframes typing{
+            to {
+                left: 100%;
+            }
+        }
+    </style>
+    <div id="app_404">
+        <strong>404</strong>
+        <div class="tips" id="cn">资源不见了</div>
+        <div class="tips" id="en">resouce not found</div>
+    </div>
+</body>
+</html>

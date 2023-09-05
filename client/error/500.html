@@ -1,0 +1,278 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Error</title>
+</head>
+
+<body>
+
+    <style>
+        :root {
+            --theme-background-color: white;
+            --theme-font-color: lightslategrey;
+            --theme-danger-color: rgba(222, 70, 70, 0.96);
+            --theme-typeAnimation-color: black;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: monospace;
+            background-color: var(--theme-background-color);
+            color: var(--theme-font-color);
+        }
+
+        #app_404 {
+            display: block;
+            box-sizing: border-box;
+            line-height: 2rem;
+            font-size: 1.5rem;
+        }
+
+        strong {
+            display: block;
+            line-height: 4rem;
+            color: var(--theme-danger-color);
+            font-size: 3rem;
+            top: -20vh;
+            left: 1vh;
+        }
+
+        .tips {
+            margin: 1rem 0;
+        }
+
+        #cn {
+            box-sizing: border-box;
+            width: fit-content;
+            letter-spacing: 0.1rem;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            position: relative;
+        }
+
+        #cn::after,
+        #cn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+        }
+
+        #cn::before {
+            background-color: var(--theme-background-color);
+            animation: typing 2s steps(5) 200ms forwards;
+        }
+
+        #cn::after {
+            width: 0.2rem;
+            background-color: var(--theme-typeAnimation-color);
+            animation:
+                typing 2s steps(5) 200ms forwards,
+                cursor_blink 400ms infinite;
+        }
+
+        #en {
+            font-family: 'Courier New', Courier, monospace;
+            box-sizing: border-box;
+            width: fit-content;
+            letter-spacing: 0.2rem;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            position: relative;
+        }
+
+        #en::after,
+        #cn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+        }
+
+        #en::before {
+            background-color: var(--theme-background-color);
+            animation: typing 2s steps(13) 500ms forwards;
+        }
+
+        #en::after {
+            background-color: var(--theme-background-color);
+            animation:
+                typing 2s steps(13) 500ms forwards,
+                cursor_blink 600ms infinite;
+        }
+
+        @keyframes cursor_blink {
+            50% {
+                background-color: var(--theme-background-color);
+            }
+        }
+
+        @keyframes typing {
+            to {
+                left: 100%;
+            }
+        }
+
+        #container {
+            position: relative;
+        }
+
+        #server-svg {
+            position: absolute;
+            display: inline;
+            width: 3rem;
+            height: 3rem;
+            top: 1rem;
+            right: 3rem;
+        }
+    </style>
+    <div id="app_404">
+        <div id="container">
+            <svg id="server-svg" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="196px" height="196px"
+                viewBox="0 0 196 196" enable-background="new 0 0 196 196" xml:space="preserve">
+                <g id="Unten">
+                    <path fill="#FFFFFF" stroke="#010202" stroke-width="3" stroke-miterlimit="10" d="M161.5,156c0,3.313-2.688,6-6,6h-116
+		c-3.313,0-6-2.688-6-6v-36c0-3.313,2.688-6,6-6h116c3.313,0,6,2.688,6,6V156z" />
+                    <path fill="#FFFFFF" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" d="M176.25,145.375
+		c0,3.105-2.637,5.625-5.888,5.625H25.137c-3.251,0-5.888-2.52-5.888-5.625v-33.75c0-3.105,2.637-5.625,5.888-5.625h145.226
+		c3.251,0,5.888,2.52,5.888,5.625V145.375z" />
+
+                    <rect x="30" y="133.287" fill="#96BF1F" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" width="13" height="9" />
+
+                    <rect x="50" y="133.287" fill="#96BF1F" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" width="13" height="9" />
+
+                    <rect x="70" y="133.287" fill="#96BF1F" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" width="13" height="9" />
+
+                    <rect x="90" y="133.287" fill="none" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" width="13" height="9" />
+
+                    <rect x="110" y="133.287" fill="none" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" width="13" height="9" />
+
+                    <rect x="130" y="133.287" fill="#96BF1F" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" width="13" height="9" />
+
+                    <rect x="150" y="133.287" fill="#96BF1F" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" width="13" height="9" />
+                    <g id="LEDs">
+                        <circle class="led" fill="#96BF1F" cx="36.5" cy="126" r="1.5" />
+                        <circle class="led" fill="#96BF1F" cx="76.5" cy="126" r="1.5" />
+                        <circle class="led" fill="#96BF1F" cx="116.5" cy="126" r="1.5" />
+                        <circle class="led" fill="#96BF1F" cx="56.5" cy="126" r="1.5" />
+                        <circle class="led" fill="#96BF1F" cx="96.5" cy="126" r="1.5" />
+                        <circle class="led" fill="#96BF1F" cx="136.5" cy="126" r="1.5" />
+                        <circle class="led" fill="#96BF1F" cx="156.5" cy="126" r="1.5" />
+                    </g>
+                </g>
+                <g id="Mitte">
+                    <path fill="#FFFFFF" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" d="M176.25,100.375
+		c0,3.105-2.637,5.625-5.888,5.625H25.137c-3.251,0-5.888-2.52-5.888-5.625v-33.75c0-3.106,2.637-5.625,5.888-5.625h145.226
+		c3.251,0,5.888,2.519,5.888,5.625V100.375z" />
+
+                    <rect x="30" y="89.287" fill="#96BF1F" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" width="13" height="9" />
+
+                    <rect x="50" y="89.287" fill="none" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" width="13" height="9" />
+
+                    <rect x="70" y="89.287" fill="#96BF1F" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" width="13" height="9" />
+
+                    <rect x="90" y="89.287" fill="#96BF1F" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" width="13" height="9" />
+
+                    <rect x="110" y="89.287" fill="#96BF1F" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" width="13" height="9" />
+
+                    <rect x="130" y="89.287" fill="none" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" width="13" height="9" />
+
+                    <rect x="150" y="89.287" fill="#96BF1F" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" width="13" height="9" />
+                    <g id="LEDs_1_">
+                        <circle class="led" fill="#96BF1F" cx="36.5" cy="82" r="1.5" />
+                        <circle class="led" fill="#96BF1F" cx="76.5" cy="82" r="1.5" />
+                        <circle class="led" fill="#96BF1F" cx="116.5" cy="82" r="1.5" />
+                        <circle class="led" fill="#96BF1F" cx="56.5" cy="82" r="1.5" />
+                        <circle class="led" fill="#96BF1F" cx="96.5" cy="82" r="1.5" />
+                        <circle class="led" fill="#96BF1F" cx="136.5" cy="82" r="1.5" />
+                        <circle class="led" fill="#96BF1F" cx="156.5" cy="82" r="1.5" />
+                    </g>
+
+                    <line fill="none" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10"
+                        x1="74.5" y1="71" x2="114.5" y2="71" />
+
+                    <line fill="none" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10"
+                        x1="123" y1="71" x2="163" y2="71" />
+                </g>
+                <g id="Oben">
+                    <path fill="#FFFFFF" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" d="M176,55.375
+		c0,3.106-2.637,5.625-5.888,5.625H24.887c-3.251,0-5.888-2.519-5.888-5.625v-33.75c0-3.106,2.637-5.625,5.888-5.625h145.226
+		c3.251,0,5.888,2.519,5.888,5.625V55.375z" />
+
+                    <rect x="30" y="39" fill="#96BF1F" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" width="61" height="9" />
+
+                    <line fill="none" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10"
+                        x1="106.5" y1="48" x2="106.5" y2="27" />
+
+                    <line fill="none" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10"
+                        x1="114.5" y1="48" x2="114.5" y2="27" />
+
+                    <line fill="none" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10"
+                        x1="122.5" y1="48" x2="122.5" y2="27" />
+
+                    <line fill="none" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10"
+                        x1="130.5" y1="48" x2="130.5" y2="27" />
+
+                    <line fill="none" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10"
+                        x1="138.5" y1="48" x2="138.5" y2="27" />
+
+                    <line fill="none" stroke="#3D3D3D" stroke-width="3" stroke-linecap="square" stroke-miterlimit="10"
+                        x1="146.5" y1="48" x2="146.5" y2="27" />
+                    <circle fill="#96BF1F" cx="158.5" cy="29.69" r="4" />
+                    <circle fill="#96BF1F" cx="158.5" cy="45.69" r="4" />
+                </g>
+                <g id="Kabel">
+                    <path display="inline" fill="none" stroke="#96BF1F" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" d="
+		M36.5,93.787c0,30.213,40,79.454,40,44" />
+                    <path display="inline" fill="none" stroke="#96BF1F" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" d="
+		M76.5,93.787c0,27.546-20,87.12-20,44" />
+                    <path display="inline" fill="none" stroke="#96BF1F" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" d="
+		M96.5,93.787c0,29.213,40,77.787,40,44" />
+                    <path display="inline" fill="none" stroke="#96BF1F" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" d="
+		M116.5,93.787c0,21.88,40,83.5,40,44" />
+                    <path display="inline" fill="none" stroke="#96BF1F" stroke-width="3" stroke-linecap="square"
+                        stroke-miterlimit="10" d="
+		M156.5,93.787c0,22.213-120,78.12-120,44" />
+                </g>
+            </svg>
+        </div>
+        <strong>500</strong>
+
+        <div class="tips" id="cn">服务器异常</div>
+        <div class="tips" id="en">Server Error!</div>
+    </div>
+</body>
+
+</html>

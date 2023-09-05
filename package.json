@@ -1,0 +1,24 @@
+{
+  "name": "blurdep-cli",
+  "version": "1.0.1",
+  "description": "a function show u clearly dependencies struct",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js cross-env port=3033 node ./server.js",
+    "test": "node ./test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/houbowii/blurdep-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/houbowii/blurdep-cli/issues"
+  },
+  "homepage": "https://github.com/houbowii/blurdep-cli#readme",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "express": "^4.18.2"
+  }
+}
