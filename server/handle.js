@@ -1,9 +1,9 @@
 const path = require("path");
-const bestFS = require("./src/utils/bestFS");
-const DepTree = require("./src/entity/depTree");
+const bestFS = require("./bestFS");
+const DepTree = require("./depTree");
 
 async function generateDependencyTree(path2resolve = "", field = "dependencies", depth = 1) {
-    let target = path2resolve === "" ? path.resolve("./package.json") : path.resolve("./node_modules/", path2resolve, "./package.json");
+    let target = (path2resolve === "") ? path.resolve("./package.json") : path.resolve("./node_modules/", path2resolve, "./package.json");
     try {
         let content = await bestFS.readFile(target);
         let { dependencies = {} } = JSON.parse(content);

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const handle = require("./handle");
-const bestFS = require("./src/utils/bestFS");
+const handle = require("./server/handle");
+const bestFS = require("./server/bestFS");
 
 handle.generateDependencyTree("", "depDependencies", 2)
   .then((depTree) => {

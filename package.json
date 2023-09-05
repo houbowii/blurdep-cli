@@ -1,13 +1,13 @@
 {
   "name": "blurdep-cli",
-  "version": "1.0.1",
+  "version": "1.0.6",
   "description": "a function show u clearly dependencies struct",
   "main": "index.js",
   "bin": {
-    "blurdep": "./bin/index.js"
+    "blurdep": "node ./bin/index.js && node ./server/server.js"
   },
   "scripts": {
-    "blurdep": "node ./bin/index.js && node ./server.js",
+    "blurdep": "node ./bin/index.js && node ./server/server.js",
     "test": "node ./test.js"
   },
   "repository": {
