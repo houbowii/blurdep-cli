@@ -4,10 +4,9 @@ const
     betterFS = require('./utils/betterFS'),
     bodyParser = require('body-parser'), 
     path = require('path'),
-    port = 8888,
-    server = express()
+    server = express();
 
-
+let port = (process.env.npm_config_port)?process.env.npm_config_port:3033;
 
 server.listen(port, ()=>{
     console.log(`server start in ${port}\nclick: (ctrl+click)`); 
@@ -15,8 +14,7 @@ server.listen(port, ()=>{
     cp.exec(`start chrome http://localhost:${port}/`)
 });
 
-server.use(bodyParser.urlencoded({extended: true}));//获得到请求体信息,存入req.body
-
+server.use(bodyParser.urlencoded({extended: true}));
 
 server.use(express.static("./client"));
 server.use((req, res)=>{

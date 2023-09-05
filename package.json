@@ -3,8 +3,11 @@
   "version": "1.0.1",
   "description": "a function show u clearly dependencies struct",
   "main": "index.js",
+  "bin": {
+    "blurdep": "./bin/index.js"
+  },
   "scripts": {
-    "start": "node ./index.js cross-env port=3033 node ./server.js",
+    "blurdep": "node ./bin/index.js && node ./server.js",
     "test": "node ./test.js"
   },
   "repository": {
